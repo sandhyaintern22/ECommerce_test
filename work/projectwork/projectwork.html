@@ -1,0 +1,117 @@
+<html>
+     <head>
+	     <title>GLOW AND LOVELY</title>
+		 <link type="text/css" rel="stylesheet" href="projectwork.css">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     </head>
+	 <body>
+	     <header>
+		   <img src="img/logo.jpg" alt="logo" width="50px" height="50px" align="left" >
+		   <p><h2>SARA'S GLOW</h2></p>
+		   <div class="navbar" align="right">
+           <a  href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+           <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> 
+           <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+           <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+           </div>
+		   <br>
+		   <p><h3><center>Looks define you better than word.The wiser you look,the better your impression</h3><center>
+		   <blockquote>Unique and powerful site of beauty products to run your entire business, brought to you by a company with the long term vision to transform the way you look.</blockquote>
+		 </header>
+		 <section name="one">
+		  <div class="w3-content w3-display-container">
+            <img class="mySlides" src="img/fullsizebannerimage_aa.png" alt="bannerimage_aa" style="width:100%">
+            <img class="mySlides" src="img/fullsizebannerimage_bb.jpg"alt="bannerimage_bb" style="width:95%" height="40%">
+            <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-white w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+          </div>
+  
+          <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+
+          function plusDivs(n) {
+          showDivs(slideIndex += n);
+          }
+
+          function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+          }
+          </script>
+		 </section>
+		 <section name="two">
+		    <div class="a"><img src="img/crmlogo.jpg" alt="crm_logo" width="50px" height="50px" align="left"><p><h3><Complete CRM platorm<h3><br>End-to-end,fully customizable CRM solutions for growing business and enterprises.</p></div>
+			 <div class="main"> 
+             <div class="num">Makeup</div> 
+             <div class="num">Skincare</div> 
+             <div class="num">Haircare</div> 	
+             <div class="num">Hygiene care</div> 
+             <div class="num">Full body care</div> 
+             <div class="num">Natural care</div> 
+		     </div>
+		 </section>
+		 <section name="three">
+		     <div class="main"> 
+             <div class="num">Women</div> 
+             <div class="num">Men</div> 
+             <div class="num">Children</div> 	
+             <div class="num">Mom and Baby</div> 
+             <div class="num">Pets</div> 
+             <div class="num">Appliances</div> 
+		     </div>
+		 </section>
+		 <section >
+		 
+          
+		 </section>
+		 <section>
+		  <table border="0">
+		   <thead>
+			<tr>
+			 <th>ABOUT US</th>
+			 <th>INSPIRE ME</th>
+			 <th>TOP CATEGORIES</th>
+			</tr>
+		   </thead>
+		   <tbody>
+			<tr>
+			 <td>Who are we</td>
+			 <td>Buying books</td>
+			 <td>Makeup</td>
+			</tr>
+			<tr>
+			 <td>Careers</td>
+			 <td>Our networks</td>
+			 <td>Skincare</td>
+			</tr>
+			<tr>
+			 <td>Disclosure</td>
+			 <td>Beauty TV</td>
+			 <td>Haircare</td>
+			</tr>
+		  </tbody>
+		  </table>
+		 </section>
+		 <footer>
+		   <dl>
+	          <dt>Follow us :</dt>
+               <dd><a href="#" class="fa fa-facebook"></a>
+               <a href="#" class="fa fa-twitter"></a>
+			   <a href="#" class="fa fa-instagram"></a>
+			   </dd>
+		     </dl>
+		   <form>
+		     <label for="search">Search:</label><br>
+			 <input type="text" id="fname" name="fname"><br><br>
+           </form>
+		 </footer>
+     </body>
+</html>

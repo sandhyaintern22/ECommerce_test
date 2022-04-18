@@ -1,0 +1,48 @@
+.div_left_right{												
+	left		: 50%;
+	margin-left	: -500px;
+	padding		: 1%;
+	position	: absolute;
+	width		: 1000px;
+}
+			
+.div_left_right .div_left,
+.div_left_right .div_right
+{
+	
+	float		: left;
+	margin		: 1%;
+	padding		: 2%;
+	text-align	: justify;
+	width		: 40%;
+}
+
+.div_left_right .div_left img{		
+	width:50px;
+}
+
+nav{
+  padding:10px;
+}
+
+section{  
+    padding:50px;  
+    margin:10px;  
+}
+
+
+table{
+  width:100%;
+  padding:15px;
+}
+
+table tr th{
+  color:#555;
+}
+
+table tr td{
+  text-align:center;
+}
+
+
+ 

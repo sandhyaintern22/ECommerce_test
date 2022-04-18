@@ -1,0 +1,144 @@
+footer{
+  background-color:#E5E4E2;
+}	
+
+section{
+  border:1px dotted black;				
+  display:block;
+  margin-bottom: 10px;
+  over-flow	 : hidden;
+}
+
+table{
+  padding:15px;
+  width:100%;
+}
+
+table tr th{
+  color:#555;
+}
+
+table tr td{
+  text-align:center;
+}
+
+.div_left_right {
+  display: flex;
+  justify-content: center;	
+  margin-left	:auto;
+  margin-right:auto;
+  padding-left:15px;
+  padding-right:15px;
+  text-align: justify;
+  width:1000px;
+}
+			
+.div_left_right::after {
+  clear:both;
+  content:"";
+  display:table;
+}
+			
+.div_left_right .div_left,
+.div_left_right .div_right{
+  align-items: center;
+  display: flex;
+  float: left;
+  height:300px;
+  justify-content: center;
+  overflow:hidden;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+  text-align: justify;
+  width: 48%;
+}
+			
+.div_left_right .div_left img,
+.div_left_right .div_right img{
+  height	: 300px;
+  width	: 100%;
+}
+			
+@media only screen and (max-width: 600px) {
+				
+.div_left_right{
+  border:0px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:0px;
+  width  : 96%;
+}
+				
+.div_left_right .div_left,
+.div_left_right .div_right{
+  border:0px;
+  margin : 0%;
+  padding:0px;
+  width  : 100%;
+}
+}
+				
+.div_left_right .div_side_a,
+.div_left_right .div_side_b,
+.div_left_right .div_side_c,
+.div_left_right .div_side_d,
+.div_left_right .div_side_e,
+.div_left_right .div_side_f
+{
+  align-items: center;
+  display: flex;
+  float: left;
+  height:200px;
+  justify-content: center;
+  overflow:hidden;
+  padding-right: 60px;
+  padding-left: 20px;
+  position: relative;
+  text-align: justify;
+  width: 16.66%;
+}
+			
+.div_left_right .div_side_b img,
+.div_left_right .div_side_d img,
+.div_left_right .div_side_f img{
+  height	: 140px;
+  width	: 150px;
+}
+			
+.div_left_right .div_child_a,
+.div_left_right .div_child_b,
+.div_left_right .div_child_c,
+.div_left_right .div_child_d
+{
+  align-items: center;
+  display: flex;
+  float: left;
+  height:200px;
+  justify-content: center;
+  overflow:hidden;
+  padding-right: 60px;
+  padding-left: 20px;
+  position: relative;
+  text-align: justify;
+  width: 25%;
+}
+
+.navbar a{
+  color:#999;
+  text-decoration:none;
+}
+
+.navbar a:hover{
+  color:#444;
+}
+
+#begin .div_left_right .div_left img{
+  width:50px;
+  height:50px;
+}
+
+#bottom ..div_left_right .div_left, .div_right{
+  display: 
+}
+

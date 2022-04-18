@@ -1,0 +1,219 @@
+footer{
+  text-align:center;
+  background-color:#D3D3D3;
+}
+
+
+h3,p{
+  text-align:center;
+}
+
+
+section{
+  opacity:0px;
+  border:1px solid  black;	
+  border-style:dotted;   
+  display		 : block;
+  margin-bottom: 10px;
+  over-flow	 : hidden;
+}
+
+table{
+  text-align:center;
+  padding-left:200px;
+  padding-right:200px;
+}
+
+ td,tr{ 
+  text-align:center;
+  padding-left:130px;
+  padding-right:100px;
+ }
+
+
+.div_left_right {
+  opacity		: 0;	
+  margin-left	:auto;
+  margin-right:auto;
+  padding-left:15px;
+  padding-right:15px;
+  width:100%;
+}
+			
+.div_left_right::after {
+  clear:both;
+  content:"";
+  display:table;
+}
+			
+.div_left_right .div_left,
+.div_left_right .div_right{
+  align-items: center;
+  display: flex;
+  float: left;
+  height:300px;
+  justify-content: center;
+  overflow:hidden;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+  text-align: justify;
+  width: 48%;
+}
+			
+.div_left_right .div_left img,
+.div_left_right .div_right img{
+  height	: 300px;
+  width	: 100%;
+}
+			
+	
+.div_left_right {
+  margin-left	:auto;
+  margin-right:auto;
+  padding-left:15px;
+  padding-right:15px;
+  width:100%;
+}
+			
+.div_left_right::after {
+  clear:both;
+  content:"";
+  display:table;
+}
+			
+.div_left_right .div_left_side
+{
+  align-items: center;
+  display: flex;
+  float: left;
+  height:300px;
+  justify-content: center;
+  overflow:hidden;
+  position: relative;
+  text-align: justify;
+  width: 33%;
+}
+			
+.div_left_right .div_grid
+{
+  align-items: center;
+  display: flex;
+  float: left;
+  height:300px;
+  justify-content: center;
+  overflow:hidden;
+  position: relative;
+  text-align: justify;
+  width: 25%;
+			}
+			
+.navbar{
+  text-decoration:none;
+}
+			
+			
+			
+			
+#bannerimage_display img{
+  width	: 100%;
+}
+			
+#features img{
+  width:50px;
+  height:50px;
+}
+		
+
+@keyframes animax_fadein{
+ 0% {opacity:0;}
+50% {opacity:0.5;}
+100% {opacity:1;}
+}
+			
+			
+.animate_delay_2s{ animation-delay: 2s;}
+.animate_delay_4s{ animation-delay: 4s;}
+.animate_delay_6s{ animation-delay: 6s;}
+.animate_delay_8s{ animation-delay: 8s;}
+.animate_delay_10s{ animation-delay: 10s;}
+.animate_delay_12s{ animation-delay: 12s;}
+.animate_delay_14s{ animation-delay: 14s;}
+.animate_delay_16s{ animation-delay: 16s;}
+.animate_delay_18s{ animation-delay: 18s;}
+.animate_delay_20s{ animation-delay: 20s;}
+.animate_delay_22s{ animation-delay: 22s;}
+.animate_delay_24s{ animation-delay: 24s;}
+					
+					
+#bannerimage_display .div_left_right{
+  animation:animax_fadein;
+  animation-duration:2s;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+
+			
+#features .div_left_right{
+  animation:animax_fadein;
+  animation-duration:1s;
+  animation-delay:3s;				
+  animation-fill-mode: forwards;
+}
+
+
+#top_brands .div_left_right{
+  animation:animax_fadein;
+  animation-duration:1s;
+  animation-delay:4s;				
+  animation-fill-mode: forwards;
+}
+
+
+#discount .div_left_right{
+  animation:animax_fadein;
+  animation-duration:1s;
+  animation-delay:5s;				
+  animation-fill-mode: forwards;
+}
+
+			
+#extra_features .div_left_right{
+  animation:animax_fadein;
+  animation-duration:1s;
+  animation-delay:6s;				
+  animation-fill-mode: forwards;
+}
+
+
+#table .div_left_right{
+  animation:animax_fadein;
+  animation-duration:1s;
+  animation-delay:7s;				
+  animation-fill-mode: forwards;
+}
+
+			
+#footer .div_left_right{
+  animation:animax_fadein;
+  animation-duration:2s;
+  animation-delay:8s;				
+  animation-fill-mode: forwards;
+}
+			
+			
+#discount .div_left_right{
+  animation: roll 3s;
+  transform: rotate(360deg);
+  animation-iteration-count: 3;
+  opacity: .7;
+  }
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
