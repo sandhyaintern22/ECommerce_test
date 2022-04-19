@@ -1,0 +1,38 @@
+<html>    
+    <head>
+        <title>Javascript</title> 
+        <link type="text/css" rel="stylesheet" href="jsp_b.css">		
+    <script>
+		// Storing HTML code  in a variable
+		function show_content(){
+		
+			var sections =     '<section id="begin">'+
+							   '<div class="div_full">'+
+							   '<img src="img/banner_img.jpg">'+
+							   '</div>'+
+							   '</section>'+'<section id="bundles">'+
+		                       '<h2  data-symbol-before="***" data-symbol-after="***">SUMMER SPECIAL</h2>'+
+			                   '<div class="div_left_right">'+
+			                   '<div class="div_left">'+
+				               '<img src="img/grid_img_a.gif" alt="product_image_a">'+
+                               '</div>'+				 
+			                   '<div class="div_right">'+
+				               '<img src="img/grid_img_b.gif" alt="product_image_b"> '+
+			                   '</div>'+
+		                       '</div>'+
+		                       '</section>';
+							   
+			
+			
+			// Inserting the code  to content element
+			document.getElementById("content_area").innerHTML = sections;
+			
+		}
+    </script>                 
+    </head>
+    <body>
+        <h3>View Section</h3> 
+        <input type="button" onclick="show_content();" value=" Show Content ">
+		<div id="content_area"></div>
+    </body>   
+</html>

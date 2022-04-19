@@ -1,0 +1,31 @@
+<html>    
+    <head>
+
+        <title>Basic Javascript</title>
+        
+  
+    <div id="wrapper"></div>
+    <script>
+    // Storing HTML code block in a variable
+	function content(){
+    var codeBlock = '<div class="content">' +
+                        '<h1>This is a heading</h1>' +
+                        '<p>This is a paragraph of text.</p>' +
+                        '<p><strong>Note:</strong> If you don\'t escape "quotes" properly, it will not work.</p>' +
+                    '</div>';
+    
+    // Inserting the code block to wrapper element
+    document.getElementById("wrapper").innerHTML = codeBlock
+	}
+    </script> 
+            
+        </script>                
+    </head>
+    
+    <body>
+        
+        <h3>Check Section</h3> 
+        <input type="button" onclick="content();" value=" Check ">
+    </body>
+    
+</html>

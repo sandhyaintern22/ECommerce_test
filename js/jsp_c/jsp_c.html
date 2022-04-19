@@ -1,0 +1,47 @@
+<html>    
+    <head>
+		<link type="text/css" rel="stylesheet" href="jsp_c.css">
+        <title>Modified Javascript</title>
+        <script>
+                function show_content(){
+            
+                    var data       = new Array();
+                    data['content'] = '';
+                    
+                    // Array
+                    
+                    var sections = new Array( '<section id="begin">'+
+							   '<div class="div_full">'+
+							   '<img src="img/banner_img.jpg">'+
+							   '</div>'+
+							   '</section>','<section id="bundles">'+
+		                       '<h2  data-symbol-before="***" data-symbol-after="***">SUMMER SPECIAL</h2>'+
+			                   '<div class="div_left_right">'+
+			                   '<div class="div_left">'+
+				               '<img src="img/grid_img_a.gif" alt="product_image_a">'+
+                               '</div>'+				 
+			                   '<div class="div_right">'+
+				               '<img src="img/grid_img_b.gif" alt="product_image_b"> '+
+			                   '</div>'+
+		                       '</div>'+
+		                       '</section>');
+            
+                    data['data_length'] = sections.length;
+                    
+                    // Array traversal
+                    
+                    for(var idx=0; idx < data['data_length']; idx++){
+                        data['content']+=(idx+1)+'. '+sections[idx]+'<br>'; 
+                    } // End of Array traversal
+                    document.getElementById('content_area').innerHTML=data['content'];
+                }
+            
+        </script>                
+    </head>
+    <body>
+        <h3>View Section</h3> 
+        <input type="button" onclick="show_content();" value="Show content">
+        <hr>
+        <div id="content_area"></div>   
+    </body>
+</html>
