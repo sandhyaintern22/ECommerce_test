@@ -1,0 +1,46 @@
+body{
+	background-color:#FFC0CB;
+}
+header{
+    background-color:#ADD8E6;
+	font-family: Lucida Calligraphy;
+    margin-bottom: 10px;	
+}
+h1{
+	background-color:#20B2BA;
+	font-family: Cooper; 
+}
+nav{
+    background-color:#FFFFFF;
+	font-family:Impact;
+	color:red;
+}	
+footer{
+	background-color:#ADD8E6;
+	font-family: Verdana;
+	font-size:10px;
+}
+section{
+	background-color:#D3D3D3;
+	border:1px dotted black;  
+    padding:15px;  
+    margin:10px;  
+}
+
+section.a{
+	background-color:#7FFFD4;
+}
+section.b{
+	background-color:#DDA0DD;
+}
+table{
+	width:100%;
+}
+
+table tr th{
+	color:#555;
+}
+
+table tr td{
+	text-align:center;
+}
