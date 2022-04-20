@@ -1,0 +1,44 @@
+<html>    
+    <head>
+		<link type="text/css" rel="stylesheet" href="jsp_e.css">
+        <title>Version Modified Javascript</title>
+        <script>
+		
+					//variable
+					var sections = '<section id="begin">'+
+									    '<div class="div_full">'+
+										'<img src="img/banner_img.jpg">'+
+									    '</div>'+
+									'</section>'+
+											   
+									'<section id="bundles">'+
+									     '<h2  data-symbol-before="***" data-symbol-after="***">SUMMER SPECIAL</h2>'+
+										 '<div class="div_left_right">'+
+										 '<div class="div_left">'+
+										 '<img src="img/grid_img_a.gif" alt="product_image_a">'+
+										 '</div>'+				 
+										 '<div class="div_right">'+
+										 '<img src="img/grid_img_b.gif" alt="product_image_b"> '+
+										 '</div>'+
+										 '</div>'+
+									'</section>';
+					
+							
+					//function declaration
+					function show_content(content,content_area_element_id){
+						
+						console.log("1.Function In.");
+						console.log('In..'+content+'-Id:'+content_area_element_id);
+						
+						document.getElementById(content_area_element_id).innerHTML=content;
+					} // end
+					
+							
+            
+        </script>                
+    </head>
+    <body>
+       <input type="button" onclick="show_content(sections,'content_area');" value="Show-Content">
+	   <div id="content_area"></div> 
+    </body>
+</html>
