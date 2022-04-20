@@ -8,6 +8,7 @@
                 function show_content(){
             
                    var content='';
+				   
                     // Array                    
                     var sections = new Array( '<section id="begin">'+
 												   '<div class="div_full">'+
@@ -32,8 +33,8 @@
                     // Array traversal
                     
                     for(section of sections){
-					console.log('In..'+section);
-					content+=section;					
+						console.log('In..'+section);
+						content+=section;					
 				    }// End of Array traversal
 					
                     document.getElementById('content_area').innerHTML=content;
