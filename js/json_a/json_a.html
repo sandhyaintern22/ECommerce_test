@@ -1,0 +1,42 @@
+<html>    
+    <head>
+        <title>JSON</title>
+		<link type="text/css" rel="stylesheet" href="json_a.css">
+        <script>
+			
+			var data= new Array(['section','id="begin"','<img src="img/banner_img.jpg">'],
+		                        ['div','id="div_left"','id="div_right"','<img src="img/grid_img_a.gif" alt="product_image_a">'],
+                               );
+						   
+		    var html_page = new Array({'tag':"section", 'attr':' id="begin"','html':'<img src="img/banner_img.jpg">'},
+									 {'tag':"div", 'attr':' id="div_left"','html':'<img src="img/grid_img_a.gif" alt="product_image_a">'}
+									 );
+						   
+			//function declaration
+			function show_content(){
+			
+					 console.log('1.In..'+html_page);
+					 var temp_content = '';	
+					 
+					 for(element of html_page){
+					 
+							console.log('2: Element '+element);
+							console.log('3 Tag-'+element.tag);
+							temp_content+='<'+element.tag +element.attr+'>'+element.html+'</'+element.tag +element.attr+'>'; 
+	                        
+					}
+					        console.log('Out:'+temp_content)
+				
+					
+					document.getElementById('content_area').innerHTML=temp_content;
+			} // end
+			
+        </script>                
+    </head>
+    
+    <body>
+		<div id="content_area"></div> 
+        <script>show_content();</script>		
+    </body>
+    
+</html>
