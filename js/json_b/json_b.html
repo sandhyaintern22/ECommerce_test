@@ -1,0 +1,59 @@
+<html>    
+    <head>
+        <title>JSON with tag behaviour</title>
+		<link type="text/css" rel="stylesheet" href="json_b.css">
+        <script>
+			
+		    var html_page = new Array({'tag':"section", 
+			                           'attr':' id="begin"',
+									   'tag_behavior':"open"},
+			
+									  {'tag':"div", 
+									   'attr':' id="div_left"',
+									   'html':'<img src="img/grid_img_a.gif" alt="product_image_a">',
+									   'tag_behavior':"full" },
+									  
+									  {'tag':"section",
+									   'tag_behavior':"close"} 
+									  );
+									
+						   
+			
+			//function declaration
+			function show_content(html_page,content_area){
+			
+				var temp_content = '';	
+				 
+				for(element of html_page){
+				 
+						console.log('2: Element '+element);
+						console.log('3 Tag-'+element.tag);
+						
+						if(element.tag_behavior=='full'){
+						
+							temp_content+='<'+element.tag +element.attr+'>'+element.html+'</'+element.tag+'>'; 
+							
+						}else if(element.tag_behavior=='open'){
+						
+							temp_content+='<'+element.tag+element.attr+'>';
+							
+						}else if(element.tag_behavior=='close'){
+						
+							temp_content+='</'+element.tag+'>'; 
+						}
+						
+				} // each element
+				
+				console.log('Out:'+temp_content);					
+				document.getElementById(content_area).innerHTML=temp_content;
+				
+			} // end
+			
+        </script>                
+    </head>
+    
+    <body>
+		<div id="content_area"></div> 
+        <script>show_content(html_page,'content_area');</script>		
+    </body>  
+</html>
