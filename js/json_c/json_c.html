@@ -1,0 +1,90 @@
+<html>    
+    <head>
+        <title>JSON with sections</title>
+		<link type="text/css" rel="stylesheet" href="json_c.css">
+        <script>
+			
+		    var html_page = new Array({'tag':"section", 
+			                           'attr':' id="categories"',
+									   'tag_behavior':"open"},
+									  
+									  {'tag':"h2", 
+			                           'attr':' data-symbol-before="---" data-symbol-after="---" ',
+									   'html':'CATEGORIES',
+									   'tag_behavior':"full"},
+		
+									  {'tag':"div", 
+			                           'attr':' id="div_left_right"',
+									   'tag_behavior':"open"},
+			
+									  {'tag':"div", 
+									   'attr':' id="div_left"',
+									   'tag_behavior':"open" },
+									   
+									  {'tag':"img", 
+			                           'attr':'src',
+									   'html':'<img src="img/section_img_a.png" width="50%">',
+									   'tag_behavior':"full"}, 
+									   
+									  {'tag':"div",
+									   'tag_behavior':"close"} ,
+									   
+									  {'tag':"div", 
+									   'attr':' id="div_right"',
+									   'tag_behavior':"open" },
+									   
+									  {'tag':"img", 
+			                           'attr':'src',
+									   'html':'<img src="img/section_img_b.jpg" width="50%">' ,
+									   'tag_behavior':"full"},
+									   
+									  {'tag':"div",
+									   'tag_behavior':"close"} ,
+									   
+									  {'tag':"div",
+									   'tag_behavior':"close"} ,
+									   
+									  {'tag':"section",
+									   'tag_behavior':"close"} 
+									  );
+									
+						   
+			
+			//function declaration
+			function show_content(html_page,content_area){
+			
+				var temp_content = '';	
+				 
+				for(element of html_page){
+				 
+						console.log('2: Element '+element);
+						console.log('3 Tag-'+element.tag);
+						
+						if(element.tag_behavior=='full'){
+						
+							temp_content+='<'+element.tag +element.attr+'>'+element.html+'</'+element.tag+'>'; 
+							
+						}else if(element.tag_behavior=='open'){
+						
+							temp_content+='<'+element.tag+element.attr+'>';
+							
+						}else if(element.tag_behavior=='close'){
+						
+							temp_content+='</'+element.tag+'>'; 
+						}
+						
+				} // each element
+				
+						console.log('Out:'+temp_content);					
+						document.getElementById(content_area).innerHTML=temp_content;
+				
+			} // end
+			
+        </script>                
+    </head>
+    
+    <body>
+		<div id="content_area"></div> 
+        <script>show_content(html_page,'content_area');</script>		
+    </body>  
+</html>
