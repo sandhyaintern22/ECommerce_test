@@ -1,0 +1,131 @@
+<html>    
+    <head>
+        <title>JSON with functions for all tag behavior</title>
+		<link type="text/css" rel="stylesheet" href="json_f.css">
+        <script>
+			
+		    var html_page = new Array({'tag':"section", 
+			                           'attr':' id="categories"',
+									   'tag_behavior':"open"},
+									  
+									  {'tag':"h2", 
+			                           'attr':' data-symbol-before="---" data-symbol-after="---" ',
+									   'html':'CATEGORIES',
+									   'tag_behavior':"full"},
+		
+									  {'tag':"div", 
+			                           'attr':' id="div_left_right"',
+									   'tag_behavior':"open"},
+			
+									  {'tag':"div", 
+									   'attr':' id="div_left"',
+									   'tag_behavior':"open" },
+									   
+									  {'tag':"img", 
+			                           'attr':'src',
+									   'html':'<img src="img/section_img_a.png" width="50%">',
+									   'tag_behavior':"full"}, 
+									   
+									  {'tag':"div",
+									   'tag_behavior':"close"} ,
+									   
+									  {'tag':"div", 
+									   'attr':' id="div_right"',
+									   'tag_behavior':"open" },
+									   
+									  {'tag':"img", 
+			                           'attr':'src',
+									   'html':'<img src="img/section_img_b.jpg" width="50%">' ,
+									   'tag_behavior':"full"},
+									   
+									  {'tag':"div",
+									   'tag_behavior':"close"} ,
+									   
+									  {'tag':"div",
+									   'tag_behavior':"close"} ,
+									   
+									  {'tag':"section",
+									   'tag_behavior':"close"} 
+									  );
+			   
+			
+						
+			//function declaration
+			function show_content(param){
+			    console.log('In:'+JSON.stringify(param));
+				
+				var lv ={'html_data':'',
+						 'content':''
+						};
+						
+				lv.html_data		 = param.data;
+				lv.target_element_id = param.element_id;
+				
+				
+				for(element of lv.html_data){
+				 
+						console.log('2: Element '+element);
+						console.log('3 Tag-'+element.tag);
+			
+						if(element.tag_behavior=='full'){
+						
+							lv.content+=html_tag_full_creation(element);
+							
+						}else if(element.tag_behavior=='open'){
+						
+							lv.content+=html_tag_open_creation(element);
+							
+						}else if(element.tag_behavior=='close'){
+						
+							lv.content+=html_tag_close_creation(element);
+						}
+						
+				} 
+				
+						console.log('Out:'+lv.content);					
+						document.getElementById(lv.target_element_id).innerHTML=lv.content;
+				
+			} // end
+			
+			//function for tag behavior-full
+			function html_tag_full_creation(param){
+			
+					console.log('tag-behavior:'+JSON.stringify(param));
+				
+					return '<'+param.tag +param.attr+'>'+param.html+'</'+param.tag+'>'; 
+				
+			}  //end
+			
+			//function for tag behavior-open
+			function html_tag_open_creation(param){
+			
+					console.log('tag-behavior:'+JSON.stringify(param));
+				
+					return '<'+param.tag +param.attr+'>'; 
+					
+			} //end
+			
+			//function for tag behavior-close
+			function html_tag_close_creation(param){
+			
+					console.log('tag-behavior:'+JSON.stringify(param));
+				
+					return '<'+param.tag +'>'; 
+				
+			} //end
+			
+			
+        </script>                
+    </head>
+    
+    <body>
+		<div id="content_area"></div> 
+        <script>
+		        show_content({'data':html_page,'element_id':'content_area'});
+		</script>		
+    </body>  
+</html>
+
+
+
+
