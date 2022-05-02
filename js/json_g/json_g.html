@@ -1,0 +1,110 @@
+<html>    
+    <head>
+        <title>JSON function for table</title>
+		<link type="text/css" rel="stylesheet" href="json_g.css">
+        <script>
+			
+		    var html_page = new Array({'tag':"table",
+									   'html':[['Name','Prize'],['P1','1000'],['P2','2000']],
+									   'tag_behavior':"full"}
+									 );
+						
+			//function declaration
+			function show_content(param){
+			
+							console.log('In:'+JSON.stringify(param));
+							
+							var lv ={'html_data':'',
+									 'content':''
+									};
+									
+								lv.html_data		 = param.data;
+								lv.target_element_id = param.element_id;
+						
+						
+							for(element of lv.html_data){
+							
+									if(element.tag=="table"){
+									   element.html=table_builder(element.html);
+									}
+							
+							if(element.tag_behavior=='full'){
+							
+								lv.content+=html_tag_full_creation(element);
+								
+							}else if(element.tag_behavior=='open'){
+							
+								lv.content+=html_tag_open_creation(element);
+								
+							}else if(element.tag_behavior=='close'){
+							
+								lv.content+=html_tag_close_creation(element);
+							}
+						
+						}
+						
+				 
+				
+						console.log('Out:'+lv.content);					
+						document.getElementById(lv.target_element_id).innerHTML=lv.content;
+				
+			} // end
+			
+			//function for tag behavior-full
+			function html_tag_full_creation(param){
+			
+						console.log('tag-behavior:'+JSON.stringify(param));
+					
+						return '<'+param.tag +param.attr+'>'+param.html+'</'+param.tag+'>'; 
+					
+			
+			}  //end
+			
+			//function for tag behavior-open
+			function html_tag_open_creation(param){
+			
+						console.log('tag-behavior:'+JSON.stringify(param));
+					
+						return '<'+param.tag +param.attr+'>'; 
+						
+			} //end
+			
+			//function for tag behavior-close
+			function html_tag_close_creation(param){
+			
+						console.log('tag-behavior:'+JSON.stringify(param));
+					
+						return '<'+param.tag +'>'; 
+					
+			} //end
+			
+			
+			// 
+			function table_builder(table_rows){
+			
+					    console.log('In function:'+JSON.stringify(table_rows));
+					    var temp_content='';
+					  
+					    for(col of table_rows){
+						   temp_content+='<tr><td>'+col[0]+'</td><td>'+col[1]+'</td></tr>';
+					    }   
+					  
+					    return '<table border=1 cellspacing=0>'+temp_content+'</table>';
+					  
+			} // end
+			
+        </script>                
+    </head>
+    
+    <body>
+		<div id="content_area"></div> 
+        <script>
+		        show_content({'data':html_page,
+				             'element_id':'content_area'});
+		</script>		
+    </body>  
+</html>
+
+
+
+
