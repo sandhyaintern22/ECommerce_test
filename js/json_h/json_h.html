@@ -1,0 +1,123 @@
+<html>    
+    <head>
+        <title>JSON for block of code</title>
+		<link type="text/css" rel="stylesheet" href="json_h.css">
+        <script>
+			
+		    var html_page = new Array({'tag':"custom", 
+			                           'html':[{'img':{'src':'img/m_product_a.jpg','alt':'ALT'},
+												'spec':[{'dt':'Brand:','dd':"Nykaa"},{'dt':'Brand:','dd':"Nykaa2"}]
+												},
+												
+											  ],
+									   'tag_behavior':"full"},
+									  );
+			   
+			
+						
+			//function declaration
+			function show_content(param){
+			
+					console.log('In:'+JSON.stringify(param));
+					
+					var lv ={'html_data':'',
+							 'content':''
+							};
+							
+					lv.html_data		 = param.data;
+					lv.target_element_id = param.element_id;
+					
+					
+					for(element of lv.html_data){
+					 
+							console.log('2: Element '+element);
+							console.log('3 Tag-'+element.tag);
+							
+							if(element.tag=="custom"){
+							   element.html=custom_builder(element.html);
+							   
+							}
+				
+				
+							if(element.tag_behavior=='full'){
+							
+								lv.content+=html_tag_full_creation(element);
+								
+							}else if(element.tag_behavior=='open'){
+							
+								lv.content+=html_tag_open_creation(element);
+								
+							}else if(element.tag_behavior=='close'){
+							
+								lv.content+=html_tag_close_creation(element);
+							}
+							
+					} 
+					
+							console.log('Out:'+lv.content);					
+							document.getElementById(lv.target_element_id).innerHTML=lv.content;
+					
+			} // end
+			
+			//function for tag behavior-full
+			function html_tag_full_creation(param){
+			
+					//console.log('tag-behavior:'+JSON.stringify(param));
+				
+					return '<'+param.tag +param.attr+'>'+param.html+'</'+param.tag+'>'; 
+				
+			}  //end
+			
+			//function for tag behavior-open
+			function html_tag_open_creation(param){
+			
+					console.log('tag-behavior:'+JSON.stringify(param));
+				
+					return '<'+param.tag +param.attr+'>'; 
+					
+			} //end
+			
+			//function for tag behavior-close
+			function html_tag_close_creation(param){
+			
+					console.log('tag-behavior:'+JSON.stringify(param));
+				
+					return '<'+param.tag +'>'; 
+				
+			} //end
+
+            
+			//custom_builder function
+			function custom_builder(block){
+			
+					var sec_content='';
+					for(content of block )
+					{
+						sec_content+='<div class="div_top_bottom">'+
+										'<div class="div_top">'+
+											'<img src="'+content.img.src+'" alt="'+content.img.alt+'" >'+
+										'</div>'+
+										'<div class="div_bottom">'+
+										 
+										'</div>'+
+									  '</div>';
+					} 
+					return sec_content;
+					
+			}// end of custom_builder function
+			
+        </script>                
+    </head>
+    
+    <body>
+		<div id="content_area"></div> 
+        <script>
+		          show_content({'data':html_page,
+				             'element_id':'content_area'});
+		</script>		
+    </body>  
+</html>
+
+
+
+
